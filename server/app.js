@@ -15,3 +15,6 @@ app.get( '/', function( req, res ){
   console.log( 'base url hit' );
   res.sendFile( path.resolve( 'public/index.html') );
 }); // end base url
+
+// static public folder
+app.use( express.static( 'public' ) );

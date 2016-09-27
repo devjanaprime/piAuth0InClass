@@ -3,8 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Auth0 Example</title>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/shrug.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body ng-app='myApp'>
     <h1>Auth0 Example</h1>
+    <div ng-controller='authController'>
+      This is called $scope.exampleThing in the JS: {{ exampleThing }}
+      <div ng-show='showStuff'>
+        $scope.showStuff is TRUE in JS
+      </div>
+      <div ng-hide='showStuff'>
+        $scope.showStuff is FALSE in JS
+      </div>
+      <button ng-click='toggleShowStuff()'>Toggle Show Stuff</button>
+    </div>
   </body>
 </html>
